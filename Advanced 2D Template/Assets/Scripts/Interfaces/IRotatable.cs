@@ -1,18 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class IRotatable : MonoBehaviour
+namespace Interfaces
 {
-    // Start is called before the first frame update
-    void Start()
+    public interface IRotatable<TSelf>
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public TSelf Rotate90();
+        public TSelf Rotate180();
+        public TSelf Rotate270();
     }
 }
