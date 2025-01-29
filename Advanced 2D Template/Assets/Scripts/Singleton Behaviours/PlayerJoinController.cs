@@ -10,10 +10,9 @@ namespace SingletonBehaviours
     public class PlayerJoinController : Types.SingletonBehaviour<PlayerJoinController>
     {
         private readonly List<LocalPlayer<InputSystem_Actions>> _localPlayers = new();
-        private InputSystem_Actions _controls;
 
-        [SerializeField] private string _join;
-        [SerializeField] private string _leave;
+        [SerializeField] private InputActionReference _join;
+        [SerializeField] private InputActionReference _leave;
 
         [SerializeField] private UnityEvent<LocalPlayer<InputSystem_Actions>> _onJoin;
         [SerializeField] private UnityEvent<LocalPlayer<InputSystem_Actions>> _onLeave;
@@ -37,10 +36,8 @@ namespace SingletonBehaviours
 
         public override void Initialize()
         {
-            _controls = new();
-
-            _controls.FindAction(_join).performed += TryPlayerJoin;
-            _controls.FindAction(_leave).performed += TryPlayerLeave;
+            _join.action.performed += TryPlayerJoin;
+            _leave.action.performed += TryPlayerLeave;
         }
 
         private void TryPlayerJoin(InputAction.CallbackContext ctx)

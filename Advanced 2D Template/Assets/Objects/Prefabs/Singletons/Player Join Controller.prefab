@@ -52,4 +52,4 @@ MonoBehaviour:
   _onLeave:
     m_PersistentCalls:
       m_Calls: []
-  _playerLimit: 0
+  _playerLimit: 1

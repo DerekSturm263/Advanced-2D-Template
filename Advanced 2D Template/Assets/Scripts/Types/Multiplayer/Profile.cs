@@ -5,7 +5,7 @@ using Steamworks;
 namespace Types.Multiplayer
 {
     [Serializable]
-    public struct Profile
+    public struct Profile : Interfaces.ISerializable
     {
         [SerializeField] private Miscellaneous.Tuple<bool, string> _username;
         public readonly string Username => SteamManager.Initialized && _username.Item1 ? SteamFriends.GetPersonaName() : _username.Item2;
@@ -75,6 +75,8 @@ namespace Types.Multiplayer
                 _level = _level
             };
         }
+
+        public readonly string GetFilePath() => $"{Application.persistentDataPath}/SaveData/Profiles";
     }
 
     [CreateAssetMenu(fileName = "New Profile Asset", menuName = "Multiplayer/Profile")]

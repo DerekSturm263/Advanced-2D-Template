@@ -24,6 +24,5 @@ namespace Types.Dialogue
 
         [SerializeField] private Collections.Dictionary<string, UnityEvent> _responses;
         public readonly Collections.Dictionary<string, UnityEvent> Responses => _responses;
-        public readonly void InvokeResponse(string index) => _responses[index].Invoke();
     }
 }

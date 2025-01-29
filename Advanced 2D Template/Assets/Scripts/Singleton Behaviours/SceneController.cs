@@ -9,7 +9,7 @@ namespace SingletonBehaviours
     {
         [SerializeField] private GameObject _transitionPrefab;
 
-        private Types.Scene.SceneLoadSettingsAsset _last;
+        private Types.Scene.SceneLoadSettings _last;
         private bool _isTransitioning;
 
         private GameObject _transitionCanvas;
@@ -39,7 +39,7 @@ namespace SingletonBehaviours
             }
         }
 
-        public void LoadLast(Types.Scene.SceneLoadSettingsAsset fallback) => Load(_last ? fallback : _last);
+        public void LoadLast(Types.Scene.SceneLoadSettingsAsset fallback) => Load(_last.Scene.Name == "" ? fallback.Value : _last);
 
         private void StartTransition(Types.Scene.SceneLoadSettings settings)
         {
@@ -72,6 +72,7 @@ namespace SingletonBehaviours
                 _transitionInstance.GetComponent<Animator>().SetTrigger("Finished");
 
             _isTransitioning = false;
+            _last = settings;
         }
 
         private void LoadNoTransition(Types.Scene.SceneLoadSettings settings)
