@@ -27,5 +27,7 @@ namespace Types.Audio
 
         [SerializeField] private List<AudioTrackTransition> _transitions;
         public readonly List<AudioTrackTransition> Transitions => _transitions;
+
+        // TODO: Add returning event for calculating weights
     }
 }

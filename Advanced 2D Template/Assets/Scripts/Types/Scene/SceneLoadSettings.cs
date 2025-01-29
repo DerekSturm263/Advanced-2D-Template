@@ -16,8 +16,8 @@ namespace Types.Scene
 
         [SerializeField] private LoadSceneParameters _loadParameters;
         public readonly LoadSceneParameters LoadParameters => _loadParameters;
-    }
 
-    [CreateAssetMenu(fileName = "New Scene Load Settings Asset", menuName = "Scene/Scene Load Settings")]
-    public class SceneLoadSettingsAsset : ScriptableObjects.Wrappers.Asset<SceneLoadSettings> { }
+        [SerializeField] private Collections.Dictionary<string, Types.Miscellaneous.Any> _sceneParameters;
+        public readonly T GetSceneParameter<T>(string key) => (T)(object)_sceneParameters[key];
+    }
 }

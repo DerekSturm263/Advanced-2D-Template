@@ -37,7 +37,7 @@ namespace Helpers
             writer.Write(json);
             writer.Flush();
 
-            Debug.Log($"{nameof(T)} has been successfully saved as: {json}");
+            Debug.Log($"{nameof(T)} has been successfully saved as: {json} to {stream.Name}");
             return true;
         }
 
@@ -71,7 +71,7 @@ namespace Helpers
                 string json = reader.ReadToEnd();
                 T item = FromJSON<T>(json);
 
-                Debug.Log($"{nameof(T)} has been successfully loaded as: {json}");
+                Debug.Log($"{nameof(T)} has been successfully loaded as: {json} from {stream.Name}");
                 return item;
             }
             else

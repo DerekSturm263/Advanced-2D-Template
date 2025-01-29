@@ -152,6 +152,4 @@ namespace Types.Wrappers
 
         public override readonly string ToString() => _value.ToString();
     }
-
-    public abstract class SerializableAsset<T> : ScriptableObjects.Wrappers.Asset<Serializable<T>> where T : Interfaces.ISerializable { }
 }

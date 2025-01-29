@@ -38,8 +38,6 @@ namespace SingletonBehaviours
 
         public override void Initialize()
         {
-            base.Initialize();
-
             if (!_musicSource)
                 _musicSource = CreateMusicSource();
 
@@ -54,8 +52,6 @@ namespace SingletonBehaviours
 
             if (_sfxSource)
                 Destroy(_sfxSource.gameObject);
-
-            base.Shutdown();
         }
 
         public void PlayAudioClip(AudioClip clip)
@@ -75,11 +71,10 @@ namespace SingletonBehaviours
             PlayTrack();
         }
 
-        // TODO: Uncomment
-        /*public void SetTrack(TrackGraph track)
+        public void SetTrack(Types.Audio.DynamicAudioTrack track)
         {
-            _musicSource.clip = track.GetUnityAsset().GetFromName("Normal").Clips[0];
-        }*/
+            _musicSource.clip = track.GetSectionFromName("Normal").Clips[0];
+        }
 
         public void PlayTrack()
         {

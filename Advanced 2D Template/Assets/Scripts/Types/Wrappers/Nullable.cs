@@ -49,6 +49,4 @@ namespace Types.Wrappers
         public static implicit operator Nullable<T>(T value) => new(value);
         public static explicit operator T(Nullable<T> value) => value.GetValueOrDefault();
     }
-
-    public abstract class NullableAsset<T> : Asset<Nullable<T>> { }
 }

@@ -9,6 +9,7 @@ namespace Types.Audio
     public struct DynamicAudioTrack
     {
         [SerializeField] private List<AudioTrackSection> _sections;
+        public readonly List<AudioTrackSection> Sections => _sections;
 
         private Dictionary<string, AudioTrackSection> _sectionsByName;
         public void InitializeSectionsDictionary() => _sectionsByName = _sections.ToDictionary(item => item.Name);

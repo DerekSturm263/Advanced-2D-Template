@@ -27,6 +27,4 @@ namespace Types.Wrappers
             _scale = scale;
         }
     }
-
-    public abstract class TransformableAsset<T> : Asset<Transformable<T>> { }
 }

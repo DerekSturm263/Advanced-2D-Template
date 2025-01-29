@@ -5,23 +5,18 @@ namespace SingletonBehaviours
     public class SaveDataController : Types.SingletonBehaviour<SaveDataController>
     {
         [SerializeField] private Types.Miscellaneous.SaveDataAsset _default;
-        [SerializeField] private string _directory;
 
         private Types.Miscellaneous.SaveData _currentData;
         public Types.Miscellaneous.SaveData CurrentData => _currentData;
 
         public override void Initialize()
         {
-            base.Initialize();
-
-            _currentData = Helpers.SerializationHelper.Load(_default.Value, _directory, "SaveData.json");
+            _currentData = Helpers.SerializationHelper.Load(_default.Value, $"{Application.persistentDataPath}/SaveData", $"{_default.name}.json");
         }
 
         public override void Shutdown()
         {
-            Helpers.SerializationHelper.Save(_currentData, _directory, "SaveData.json");
-
-            base.Shutdown();
+            Helpers.SerializationHelper.Save(_currentData, $"{Application.persistentDataPath}/SaveData", $"{_default.name}.json");
         }
     }
 }

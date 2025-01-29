@@ -9,14 +9,14 @@ namespace Types.Scene
     {
 #if UNITY_EDITOR
 
-        [SerializeField] private UnityEngine.Object _sceneAsset;
+        [SerializeField] private UnityEngine.Object _asset;
 
 #endif
         [SerializeField] private string _name;
 
         public SceneField(UnityEngine.Object sceneAsset, string name)
         {
-            _sceneAsset = sceneAsset;
+            _asset = sceneAsset;
             _name = name;
         }
 
@@ -39,7 +39,7 @@ namespace Types.Scene
                 .Select(s => s.path)
                 .FirstOrDefault(s => s.EndsWith(name + ".unity"));
 
-            _sceneAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEditor.SceneAsset>(scenePath);
+            _asset = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEditor.SceneAsset>(scenePath);
 
 #endif
             _name = name;

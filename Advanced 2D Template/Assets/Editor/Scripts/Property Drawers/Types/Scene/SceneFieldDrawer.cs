@@ -10,8 +10,8 @@ namespace Types.Scene
         {
             EditorGUI.BeginProperty(position, GUIContent.none, property);
 
-            SerializedProperty sceneAsset = property.FindPropertyRelative("_sceneAsset");
-            SerializedProperty sceneName = property.FindPropertyRelative("_sceneName");
+            SerializedProperty sceneAsset = property.FindPropertyRelative("_asset");
+            SerializedProperty sceneName = property.FindPropertyRelative("_name");
 
             position = EditorGUI.PrefixLabel(position, label);
 

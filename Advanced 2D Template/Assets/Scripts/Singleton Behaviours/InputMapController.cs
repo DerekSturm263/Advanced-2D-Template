@@ -14,18 +14,10 @@ namespace SingletonBehaviours
         private InputDevice _currentDevice;
         public InputDevice CurrentDevice => _currentDevice;
 
-        private IDisposable _event;
-
         public override void Initialize()
         {
             _currentDevice ??= InputSystem.devices.First(item => _settings.Value.HasControlScheme(item.displayName));
-            _event = InputSystem.onAnyButtonPress.Call(SetAllInputDevices);
-        }
-
-        public override void Shutdown()
-        {
-            _event.Dispose();
-            _currentDevice = null;
+            InputSystem.onAnyButtonPress.Call(SetAllInputDevices);
         }
 
         public void SetAllInputDevices(InputControl action)

@@ -4,8 +4,8 @@ namespace Types
 {
     public abstract class SingletonBehaviourBase : MonoBehaviour
     {
-        public abstract void Initialize();
-        public abstract void Shutdown();
+        public virtual void Initialize() { }
+        public virtual void Shutdown() { }
     }
 
     public abstract class SingletonBehaviour<T> : SingletonBehaviourBase where T : MonoBehaviour
@@ -13,18 +13,20 @@ namespace Types
         private static T s_instance;
         public static T Instance => s_instance;
 
-        public override void Initialize()
+        private void Awake()
         {
             s_instance = this as T;
+            Initialize();
 
-            Application.quitting += Shutdown;
+            Debug.Log($"{name}: Initialized");
         }
 
-        public override void Shutdown()
+        private void OnDestroy()
         {
-            Application.quitting -= Shutdown;
-
+            Shutdown();
             s_instance = null;
+         
+            Debug.Log($"{name}: Shutdown");
         }
     }
 }

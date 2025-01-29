@@ -11,24 +11,32 @@ namespace Types.Multiplayer
     public readonly struct LocalPlayer<TControls> where TControls : IInputActionCollection2, IDisposable, new()
     {
         [SerializeField] private readonly InputUser _user;
+        public readonly InputUser User => _user;
+        
         [SerializeField] private readonly InputDevice _device;
-        [SerializeField] private readonly TControls _controls;
+        public readonly InputDevice Device => _device;
 
+        [SerializeField] private readonly TControls _controls;
         public readonly TControls Controls => _controls;
 
-        public LocalPlayer(InputDevice device)
+        [SerializeField] private readonly Profile _profile;
+        public readonly Profile Profile => _profile;
+
+        public LocalPlayer(InputDevice device, Profile profile)
         {
             if (device is not null)
             {
                 _user = InputUser.PerformPairingWithDevice(device);
                 _device = device;
                 _controls = CreateControls(ref _user, _device);
+                _profile = profile;
             }
             else
             {
                 _user = InputUser.CreateUserWithoutPairedDevices();
                 _device = InputSystem.devices.FirstOrDefault();
                 _controls = new();
+                _profile = profile;
             }
 
             Debug.Log($"Player {_user.index + 1} created with device {_device.displayName}");

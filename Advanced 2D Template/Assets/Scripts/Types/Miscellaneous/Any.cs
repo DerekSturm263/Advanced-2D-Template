@@ -142,7 +142,4 @@ namespace Types.Miscellaneous
             return new Any(typeof(T), value);
         }
     }
-    
-    [CreateAssetMenu(fileName = "New Any Asset", menuName = "Miscellaneous/Any")]
-    public class AnyAsset : ScriptableObjects.Wrappers.Asset<Any> { }
 }

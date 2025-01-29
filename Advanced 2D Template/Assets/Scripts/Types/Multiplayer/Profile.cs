@@ -78,7 +78,4 @@ namespace Types.Multiplayer
 
         public readonly string GetFilePath() => $"{Application.persistentDataPath}/SaveData/Profiles";
     }
-
-    [CreateAssetMenu(fileName = "New Profile Asset", menuName = "Multiplayer/Profile")]
-    public class ProfileAsset : ScriptableObjects.Wrappers.Asset<Profile> { }
 }

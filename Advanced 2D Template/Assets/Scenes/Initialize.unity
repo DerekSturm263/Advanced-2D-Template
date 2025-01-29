@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1963405139261712452, guid: e74d83839ea72974da55a007e1965767, type: 3}
       propertyPath: m_Name
-      value: Controller Spawner
+      value: Controller Manager
       objectReference: {fileID: 0}
     - target: {fileID: 3937834225456521913, guid: e74d83839ea72974da55a007e1965767, type: 3}
       propertyPath: m_LocalPosition.x
@@ -209,12 +209,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: -4741417194260610726, guid: faaef5956c0f71c4989e1a94f17a4856, type: 3}
-        m_TargetAssemblyTypeName: SingletonBehaviours.SceneController, Assembly-CSharp
+        m_TargetAssemblyTypeName: SingletonBehaviours.SceneController, Runtime
         m_MethodName: Load
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: Types.Scene.SceneLoadSettingsAsset, Assembly-CSharp
+          m_ObjectArgument: {fileID: 11400000, guid: f77e771ebb9a0ad49a0695c32a6127c0, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Types.Scene.SceneLoadSettingsAsset, Runtime
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -9,7 +9,8 @@ namespace Types.Scene
         {
             new string[] { "_scene" },
             new string[] { "_transition" },
-            new string[] { "_loadParameters" }
+            new string[] { "_loadParameters" },
+            new string[] { "_sceneParameters" }
         };
     }
 }

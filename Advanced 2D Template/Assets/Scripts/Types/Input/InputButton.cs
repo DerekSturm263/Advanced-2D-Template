@@ -28,7 +28,4 @@ namespace Types.Input
         [SerializeField] private InputActionReference _action;
         public readonly InputActionReference Action => _action;
     }
-
-    [CreateAssetMenu(fileName = "New Input Button Asset", menuName = "Input/Input Button")]
-    public class InputButtonAsset : ScriptableObjects.Wrappers.Asset<InputButton> { }
 }

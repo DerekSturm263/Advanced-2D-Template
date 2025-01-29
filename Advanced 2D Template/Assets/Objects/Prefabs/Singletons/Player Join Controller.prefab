@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07951eb4bcb75cf49ac5c00611c3aa97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _join: 
-  _leave: 
+  _join: {fileID: -8535707587922082852, guid: 559990ccb11379a4cb78d056bf9dac68, type: 3}
+  _leave: {fileID: -4830421802864112495, guid: 559990ccb11379a4cb78d056bf9dac68, type: 3}
   _onJoin:
     m_PersistentCalls:
       m_Calls: []
