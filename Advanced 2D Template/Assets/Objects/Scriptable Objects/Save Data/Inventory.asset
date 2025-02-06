@@ -21,12 +21,12 @@ MonoBehaviour:
           _typeName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
           _cSharpObjValue:
-            rid: 8593071075858842316
+            rid: 8593071076119151455
           _unityObjValue: {fileID: 0}
   references:
     version: 2
     RefIds:
-    - rid: 8593071075858842316
+    - rid: 8593071076119151455
       type: {class: Vector3, ns: UnityEngine, asm: UnityEngine.CoreModule}
       data:
         x: -4

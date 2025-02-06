@@ -253,9 +253,119 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1841940822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841940824}
+  - component: {fileID: 1841940823}
+  m_Layer: 0
+  m_Name: Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1841940823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841940822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7fce6f499e6094582ea1ca544e7992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namesToObjects:
+    _kvps: []
+  optionalSO:
+    _nonNullValue: {fileID: 0}
+    _hasValue: 0
+  settings:
+    _fov: 0
+    _translationSpeed: 0
+    _translationOffset: {x: 0, y: 0, z: 0}
+    _translationClamp:
+      _min: {x: 0, y: 0, z: 0}
+      _max: {x: 0, y: 0, z: 0}
+    _rotationSpeed: 0
+    _rotationOffset: {x: 0, y: 0, z: 0}
+    _rotationClamp:
+      _min: {x: 0, y: 0, z: 0}
+      _max: {x: 0, y: 0, z: 0}
+    _zoomOffset: 0
+    _zoomSpeed: 0
+    _zoomScale: 0
+    _volume: {fileID: 0}
+  g1: {fileID: 0}
+  any:
+    _type: 0
+    _typeName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    _cSharpObjValue:
+      rid: 8593071119982134061
+    _unityObjValue: {fileID: 0}
+  groundedCast:
+    _direction: {x: 0, y: 0, z: 0}
+    _maxDistance: 0
+    _layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    _triggerInteraction: 0
+    _settings:
+      _value1:
+        _offset: {x: 0, y: 0, z: 0}
+        _size: {x: 0, y: 0, z: 0}
+        _rotation: {x: 0, y: 0, z: 0, w: 0}
+      _value2:
+        _offset: {x: 0, y: 0, z: 0}
+        _radius: 0
+      _value3:
+        _points:
+          _min: {x: 0, y: 0, z: 0}
+          _max: {x: 0, y: 0, z: 0}
+        _radius: 0
+      _index: 0
+  sceneSettings:
+    _scene:
+      _asset: {fileID: 0}
+      _name: 
+    _transition: {fileID: 0}
+    _loadParameters:
+      m_LoadSceneMode: 0
+      m_LocalPhysicsMode: 0
+    _sceneParameters:
+      _kvps: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8593071119982134061
+      type: {class: Int32, ns: System, asm: mscorlib}
+      data: 
+--- !u!4 &1841940824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841940822}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1167.5771, y: 891.5909, z: -7.931723}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 670677405}
   - {fileID: 1429266215}
+  - {fileID: 1841940824}

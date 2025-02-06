@@ -15,20 +15,26 @@ MonoBehaviour:
   _value:
     _data:
       _kvps:
-      - _item1: LastPos
+      - _item1: Test
         _item2:
           _type: 0
-          _typeName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          _typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           _cSharpObjValue:
-            rid: 8593071075858842316
+            rid: 8593071076119151387
+          _unityObjValue: {fileID: 0}
+      - _item1: 
+        _item2:
+          _type: 0
+          _typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+          _cSharpObjValue:
+            rid: 8593071076105781864
           _unityObjValue: {fileID: 0}
   references:
     version: 2
     RefIds:
-    - rid: 8593071075858842316
-      type: {class: Vector3, ns: UnityEngine, asm: UnityEngine.CoreModule}
-      data:
-        x: -4
-        y: 50
-        z: 72
+    - rid: 8593071076105781864
+      type: {class: Single, ns: System, asm: mscorlib}
+      data: 
+    - rid: 8593071076119151387
+      type: {class: Single, ns: System, asm: mscorlib}
+      data: 
